@@ -1,0 +1,70 @@
+/* Pastikan layout halaman tidak terganggu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Gaya untuk main */
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Gaya untuk container produk */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+/* Gaya untuk item produk (kartu) */
+.product-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Gaya untuk nama buku */
+.product-item h3 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+/* Gaya untuk harga buku */
+.product-item p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
